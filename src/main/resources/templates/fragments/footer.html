@@ -8,16 +8,29 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
         <link th:href="@{/bootstrap2/css/bootstrap.min.css}" rel="stylesheet" />
-      
+
         <link th:href="@{/bootstrap2/css/heroic-features.css}" rel="stylesheet}" />
         <link rel="stylesheet" th:href="@{/bootstrap2/css/bootstrap.css}" />
-     </head>
+    </head>
     <body  th:fragment="footer"   >
-        <footer th:fragment="footer" class="modal-footer" style=" background-color:  #000">
-            <div align="center"><img src="@{/csdportal/img/footerimg.png}" height="50" with="70"
-                                     th:src="@{/csdportal/img/footerimg.png}"/>
-                <span style="color:  #46b8da">Promoting your Health the easier way </span>
-                &copy; 2015 Powered by <a target="_blank" th:href="@{http://www.hitrac.co.zw}">HITRAC</a>
+        <footer th:fragment="footer" class="modal-footer" style=" background-color:#191970">
+
+
+
+     <div     class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <p>Health Workforce Observatory</p>
+                
+                <ul  class="nav navbar-nav">
+                    <li>
+                        <a href="#">About</a>
+                    </li>
+                    <li>
+                        <a href="#">Services</a>
+                    </li>
+                    <li>
+                        <a href="#">Contact</a>
+                    </li>
+                </ul>
             </div>
         </footer>
     </body>

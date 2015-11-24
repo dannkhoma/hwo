@@ -1,0 +1,11 @@
+
+<div>
+    <form action="#"   th:object="${facility}" method="post">
+        <div>
+            <input type="hidden" th:field="*{id}" />
+            <input type="text" th:field="*{name}"  class="form-control"/>
+            <input type="text" th:field="*{description}" class="form-control"/>
+            <input type="submit" value="Submit"/>
+        </div>
+    </form>
+</div>
