@@ -2,6 +2,7 @@ package zw.hitrac.hwo.domain;
 
 import java.io.Serializable;
 import java.util.Date;
+import java.util.UUID;
 import javax.persistence.Column;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -23,12 +24,12 @@ public abstract class BaseEntity implements Serializable {
     protected Long id;
     @Temporal(value = TemporalType.TIMESTAMP)
     @Column(updatable = false)
-    private Date dateCreated;
+    private Date dateCreated= new Date();
     @Temporal(value = TemporalType.TIMESTAMP)
     private Date dateModified;
     @Column(unique = true, updatable = false)
-    private String uuid;
-    private Boolean retired;
+    private String uuid=UUID.randomUUID().toString();
+    private Boolean retired=Boolean.FALSE;
 
     public Long getId() {
         return id;

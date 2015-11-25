@@ -1,0 +1,30 @@
+
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    </head>
+    <body>
+        
+      <a th:href="@{|/posts/post/|}">New</a>
+               
+
+        <table>
+            <thead>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Action</th>
+        </thead>
+        <tbody>
+            <tr th:each="post : ${posts}">
+                <td th:text="${post.name}"></td>
+                <td th:text="${post.description}"></td>
+                <td>
+                    <a th:href="@{|/posts/post/?id=${post.id}|}">Edit</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

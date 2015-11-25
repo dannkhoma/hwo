@@ -1,38 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
+    <head>
 
-    <meta charset="utf-8"/>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <meta name="description" content=""/>
-    <meta name="author" content=""/>
+        <meta charset="utf-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <meta name="description" content=""/>
+        <meta name="author" content=""/>
 
-    <title>Health Worforce Observatory</title>
+        <title>Health Worforce Observatory</title>
 
-    <!-- Bootstrap Core CSS -->
-    <link th:href="@{/bootstrap2/css/bootstrap.min.css}" rel="stylesheet"/>
+        <!-- Bootstrap Core CSS -->
+        <link th:href="@{/bootstrap2/css/bootstrap.min.css}" rel="stylesheet"/>
 
-    <!-- Custom CSS -->
-    <link  th:href="@{/bootstrap2/css/heroic-features.css}" rel="stylesheet"/>
+        <!-- Custom CSS -->
+        <link  th:href="@{/bootstrap2/css/heroic-features.css}" rel="stylesheet"/>
 
-</head>
+    </head>
 
-<body>
-    <div th:replace="fragments/header :: header"></div>
-    <!-- Page Content -->
- <a th:href="@{/facilities}">Facility</a>
-    
-     <div th:replace="fragments/footer :: footer"></div>
-    <!-- /.container -->
+    <body>
+        <div th:replace="fragments/header :: header"></div>
+        <!-- Page Content -->
+        <a th:href="@{/facilities}">Facility</a>
+        <a th:href="@{/posts}">Posts</a>
 
-    <!-- jQuery -->
-    <script src="js/jquery.js"></script>
+        <div th:replace="fragments/footer :: footer"></div>
+        <!-- /.container -->
 
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
+        <!-- jQuery -->
+        <script src="js/jquery.js"></script>
 
-</body>
+        <!-- Bootstrap Core JavaScript -->
+        <script src="js/bootstrap.min.js"></script>
+
+    </body>
 
 </html>
