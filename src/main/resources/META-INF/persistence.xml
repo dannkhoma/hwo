@@ -6,6 +6,7 @@
     <class>zw.hitrac.hwo.domain.BaseEntity</class>
     <class>zw.hitrac.hwo.domain.Facility</class>
     <class>zw.hitrac.hwo.domain.Post</class>
+    <class>zw.hitrac.hwo.domain.StationEstablishment</class>
     <properties>
       <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/mysql?zeroDateTimeBehavior=convertToNull"/>
       <property name="javax.persistence.jdbc.password" value="hitrac"/>

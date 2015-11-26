@@ -1,0 +1,30 @@
+
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    </head>
+    <body>
+        
+      <a th:href="@{|/stationEstablishments/stationEstablishment/|}">New</a>
+               
+
+        <table>
+            <thead>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Action</th>
+        </thead>
+        <tbody>
+            <tr th:each="stationEstablishment : ${stationEstablishments}">
+                <td th:text="${stationEstablishment.name}"></td>
+                <td th:text="${stationEstablishment.description}"></td>
+                <td>
+                    <a th:href="@{|/stationEstablishments/stationEstablishment/?id=${stationEstablishment.id}|}">Edit</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
