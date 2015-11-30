@@ -7,8 +7,10 @@ import zw.hitrac.hwo.domain.Facility;
  *
  * @author Phineas Chikumba
  */
-public interface FacilityRepository extends JpaRepository<Facility, Long>{
-    
-     public Facility findByUuid(String uuid);
-    
+public interface FacilityRepository extends JpaRepository<Facility, Long> {
+
+    public Facility findByUuid(String uuid);
+
+    public Facility findByMohccUuid(String mohccUuid);
+
 }

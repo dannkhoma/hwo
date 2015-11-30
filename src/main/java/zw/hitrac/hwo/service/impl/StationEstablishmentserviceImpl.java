@@ -1,4 +1,3 @@
-
 package zw.hitrac.hwo.service.impl;
 
 import java.util.List;
@@ -13,15 +12,15 @@ import zw.hitrac.hwo.service.StationEstablishmentService;
  * @author Tonderai Ndangana
  */
 @Service
-public class StationEstablishmentserviceImpl implements  StationEstablishmentService{
-    
+public class StationEstablishmentserviceImpl implements StationEstablishmentService {
+
     @Autowired
     private StationEstablishmentDao stationEstablishmentDao;
 
     @Override
     public StationEstablishment save(StationEstablishment stationEstablishment) {
         return stationEstablishmentDao.save(stationEstablishment);
-        }
+    }
 
     @Override
     public List<StationEstablishment> findAll() {
@@ -37,5 +36,5 @@ public class StationEstablishmentserviceImpl implements  StationEstablishmentSer
     public StationEstablishment findByUuid(String uuid) {
         return stationEstablishmentDao.findByUuid(uuid);
     }
-    
+
 }

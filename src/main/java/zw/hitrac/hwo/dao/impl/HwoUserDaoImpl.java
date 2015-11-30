@@ -13,28 +13,28 @@ import zw.hitrac.hwo.repository.HwoUserRepository;
  */
 @Repository
 public class HwoUserDaoImpl implements HwoUserDao {
-    
+
     @Autowired
     private HwoUserRepository hwoUserRepository;
-    
+
     @Override
     public HwoUser save(HwoUser hwoUser) {
         return hwoUserRepository.save(hwoUser);
     }
-    
+
     @Override
     public List<HwoUser> findAll() {
         return hwoUserRepository.findAll();
     }
-    
+
     @Override
     public HwoUser findOne(Long id) {
         return hwoUserRepository.findOne(id);
     }
-    
+
     @Override
     public HwoUser findByUuid(String Uuid) {
         return hwoUserRepository.findByUuid(Uuid);
     }
-    
+
 }

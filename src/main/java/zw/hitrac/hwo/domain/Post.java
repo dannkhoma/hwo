@@ -6,15 +6,12 @@ import javax.persistence.Entity;
  *
  * @author Tonderai Ndangana
  */
-@Entity 
-public class Post extends BaseEntity {
-    
-    
-    
+@Entity
+public class Post extends StaticDataBaseEntity {
+
     private static final long serialVersionUID = 1L;
     private String name;
     private String description;
-
 
     public String getName() {
         return name;
@@ -32,8 +29,6 @@ public class Post extends BaseEntity {
         this.description = description;
     }
 
-  
- 
     @Override
     public int hashCode() {
         int hash = 0;
@@ -58,5 +53,5 @@ public class Post extends BaseEntity {
     public String toString() {
         return "zw.hitrac.hwo.domain.Post[ id=" + id + " ]";
     }
-    
+
 }

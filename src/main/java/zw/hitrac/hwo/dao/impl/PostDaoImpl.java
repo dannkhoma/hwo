@@ -9,7 +9,6 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import zw.hitrac.hwo.dao.PostDao;
-import zw.hitrac.hwo.domain.Facility;
 import zw.hitrac.hwo.domain.Post;
 import zw.hitrac.hwo.repository.PostRepository;
 
@@ -19,31 +18,35 @@ import zw.hitrac.hwo.repository.PostRepository;
  */
 @Repository
 public class PostDaoImpl implements PostDao {
-    
+
     @Autowired
     private PostRepository postRepository;
 
     @Override
     public Post save(Post post) {
-      return postRepository.save(post);
+        return postRepository.save(post);
     }
 
     @Override
     public List<Post> findAll() {
-       return  postRepository.findAll();
+        return postRepository.findAll();
     }
 
     @Override
     public Post findOne(Long id) {
         return postRepository.findOne(id);
-       
+
     }
 
     @Override
     public Post findByUuid(String uuid) {
-        return  postRepository.findByUuid(uuid);
-       
+        return postRepository.findByUuid(uuid);
+
     }
 
-  
+    @Override
+    public Post findByMohccUuid(String mohccUuid) {
+        return postRepository.findByMohccUuid(mohccUuid);
+    }
+
 }

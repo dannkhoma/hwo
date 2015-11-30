@@ -12,15 +12,15 @@ import zw.hitrac.hwo.service.FacilityService;
  * @author hitrac
  */
 @Service
-public class FacilityServiceImpl implements FacilityService{
-    
+public class FacilityServiceImpl implements FacilityService {
+
     @Autowired
     private FacilityDao facilityDao;
 
     @Override
     public Facility save(Facility facility) {
         return facilityDao.save(facility);
-        }
+    }
 
     @Override
     public List<Facility> findAll() {
@@ -36,5 +36,10 @@ public class FacilityServiceImpl implements FacilityService{
     public Facility findByUuid(String uuid) {
         return facilityDao.findByUuid(uuid);
     }
-    
+
+    @Override
+    public Facility findByMohccUuid(String mohccUuid) {
+        return facilityDao.findByMohccUuid(mohccUuid);
+    }
+
 }

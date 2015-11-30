@@ -1,32 +1,24 @@
 package zw.hitrac.hwo.domain;
 
-import javax.persistence.Entity;
+import javax.persistence.MappedSuperclass;
 
 /**
  *
- * @author tonderai ndangana
+ * @author Daniel Nkhoma
  */
-@Entity
-public class Facility extends StaticDataBaseEntity {
+@MappedSuperclass
+public abstract class StaticDataBaseEntity extends BaseEntity {
 
     private static final long serialVersionUID = 1L;
-    private String name;
-    private String description;
 
-    public String getName() {
-        return name;
+    private String mohccUuid;
+
+    public String getMohccUuid() {
+        return mohccUuid;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
+    public void setMohccUuid(String mohccUuid) {
+        this.mohccUuid = mohccUuid;
     }
 
     @Override
@@ -39,10 +31,10 @@ public class Facility extends StaticDataBaseEntity {
     @Override
     public boolean equals(Object object) {
         // TODO: Warning - this method won't work in the case the id fields are not set
-        if (!(object instanceof Facility)) {
+        if (!(object instanceof StaticDataBaseEntity)) {
             return false;
         }
-        Facility other = (Facility) object;
+        StaticDataBaseEntity other = (StaticDataBaseEntity) object;
         if ((this.id == null && other.id != null) || (this.id != null && !this.id.equals(other.id))) {
             return false;
         }
@@ -51,7 +43,7 @@ public class Facility extends StaticDataBaseEntity {
 
     @Override
     public String toString() {
-        return "zw.hitrac.hwo.domain.Facility[ id=" + id + " ]";
+        return "zw.hitrac.hwo.domain.BaseEntity[ id=" + id + " ]";
     }
 
 }

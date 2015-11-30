@@ -12,8 +12,8 @@ import zw.hitrac.hwo.repository.FacilityRepository;
  * @author hitrac
  */
 @Repository
-public class FacilityDaoImpl implements FacilityDao{
-    
+public class FacilityDaoImpl implements FacilityDao {
+
     @Autowired
     private FacilityRepository facilityRepository;
 
@@ -29,12 +29,17 @@ public class FacilityDaoImpl implements FacilityDao{
 
     @Override
     public Facility findOne(Long id) {
-       return facilityRepository.findOne(id);
+        return facilityRepository.findOne(id);
     }
 
     @Override
     public Facility findByUuid(String uuid) {
-       return facilityRepository.findByUuid(uuid);
+        return facilityRepository.findByUuid(uuid);
     }
-    
+
+    @Override
+    public Facility findByMohccUuid(String mohccUuid) {
+        return facilityRepository.findByMohccUuid(mohccUuid);
+    }
+
 }
