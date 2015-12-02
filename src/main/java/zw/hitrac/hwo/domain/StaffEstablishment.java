@@ -7,7 +7,7 @@ import javax.persistence.Entity;
  * @author hitrac
  */
 @Entity
-public class StationEstablishment extends BaseEntity {
+public class StaffEstablishment extends BaseEntity {
 
     private static final long serialVersionUID = 1L;
     private String name;
@@ -39,10 +39,10 @@ public class StationEstablishment extends BaseEntity {
     @Override
     public boolean equals(Object object) {
         // TODO: Warning - this method won't work in the case the id fields are not set
-        if (!(object instanceof StationEstablishment)) {
+        if (!(object instanceof StaffEstablishment)) {
             return false;
         }
-        StationEstablishment other = (StationEstablishment) object;
+        StaffEstablishment other = (StaffEstablishment) object;
         if ((this.id == null && other.id != null) || (this.id != null && !this.id.equals(other.id))) {
             return false;
         }

@@ -3,37 +3,37 @@ package zw.hitrac.hwo.service.impl;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import zw.hitrac.hwo.dao.StationEstablishmentDao;
-import zw.hitrac.hwo.domain.StationEstablishment;
-import zw.hitrac.hwo.service.StationEstablishmentService;
+import zw.hitrac.hwo.dao.StaffEstablishmentDao;
+import zw.hitrac.hwo.domain.StaffEstablishment;
+import zw.hitrac.hwo.service.StaffEstablishmentService;
 
 /**
  *
  * @author Tonderai Ndangana
  */
 @Service
-public class StationEstablishmentserviceImpl implements StationEstablishmentService {
+public class StaffEstablishmentServiceImpl implements StaffEstablishmentService {
 
     @Autowired
-    private StationEstablishmentDao stationEstablishmentDao;
+    private StaffEstablishmentDao stationEstablishmentDao;
 
     @Override
-    public StationEstablishment save(StationEstablishment stationEstablishment) {
+    public StaffEstablishment save(StaffEstablishment stationEstablishment) {
         return stationEstablishmentDao.save(stationEstablishment);
     }
 
     @Override
-    public List<StationEstablishment> findAll() {
+    public List<StaffEstablishment> findAll() {
         return stationEstablishmentDao.findAll();
     }
 
     @Override
-    public StationEstablishment findOne(Long id) {
+    public StaffEstablishment findOne(Long id) {
         return stationEstablishmentDao.findOne(id);
     }
 
     @Override
-    public StationEstablishment findByUuid(String uuid) {
+    public StaffEstablishment findByUuid(String uuid) {
         return stationEstablishmentDao.findByUuid(uuid);
     }
 

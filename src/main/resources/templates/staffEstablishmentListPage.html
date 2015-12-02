@@ -6,9 +6,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     </head>
     <body>
-        
-      <a th:href="@{|/stationEstablishments/stationEstablishment/|}">New</a>
-               
+
+        <a th:href="@{|/staffEstablishments/staffEstablishment/|}">New</a>
+
 
         <table>
             <thead>
@@ -17,11 +17,11 @@
             <th>Action</th>
         </thead>
         <tbody>
-            <tr th:each="stationEstablishment : ${stationEstablishments}">
-                <td th:text="${stationEstablishment.name}"></td>
-                <td th:text="${stationEstablishment.description}"></td>
+            <tr th:each="staffEstablishment : ${staffEstablishments}">
+                <td th:text="${staffEstablishment.name}"></td>
+                <td th:text="${staffEstablishment.description}"></td>
                 <td>
-                    <a th:href="@{|/stationEstablishments/stationEstablishment/?id=${stationEstablishment.id}|}">Edit</a>
+                    <a th:href="@{|/staffEstablishments/staffEstablishment/?id=${staffEstablishment.id}|}">Edit</a>
                 </td>
             </tr>
         </tbody>
