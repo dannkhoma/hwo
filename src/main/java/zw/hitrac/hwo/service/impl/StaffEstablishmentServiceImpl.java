@@ -37,4 +37,9 @@ public class StaffEstablishmentServiceImpl implements StaffEstablishmentService 
         return stationEstablishmentDao.findByUuid(uuid);
     }
 
+    @Override
+    public StaffEstablishment findByMohccUuid(String mohccUuid) {
+     return stationEstablishmentDao.findByMohccUuid(mohccUuid);
+    }
+
 }

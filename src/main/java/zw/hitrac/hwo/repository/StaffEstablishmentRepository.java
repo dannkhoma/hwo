@@ -10,5 +10,7 @@ import zw.hitrac.hwo.domain.StaffEstablishment;
 public interface StaffEstablishmentRepository extends JpaRepository<StaffEstablishment, Long> {
 
     public StaffEstablishment findByUuid(String uuid);
+    
+     public StaffEstablishment findByMohccUuid(String mohccUuid);
 
 }

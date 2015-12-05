@@ -14,4 +14,11 @@ public class Home {
     public String index() {
         return "index";
     }
+    
+    @RequestMapping("/about")
+    public String  aboutHwo () {
+        return "aboutHwo";
+    }
 }
+
+    
