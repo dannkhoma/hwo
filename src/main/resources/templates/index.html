@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
+    
 
         <meta charset="utf-8"/>
         <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -9,7 +9,7 @@
         <meta name="description" content=""/>
         <meta name="author" content=""/>
 
-        <title>Health Worforce Observatory</title>
+        <title>Health Workforce Observatory</title>
 
         <!-- Bootstrap Core CSS -->
         <link th:href="@{/bootstrap2/css/bootstrap.min.css}" rel="stylesheet"/>
@@ -17,23 +17,32 @@
         <!-- Custom CSS -->
         <link  th:href="@{/bootstrap2/css/heroic-features.css}" rel="stylesheet"/>
 
-    </head>
+    
 
-    <body>
+        <body>
         <div th:replace="fragments/header :: header"></div>
-        <!-- Page Content -->
+        <div class="container">
         <a th:href="@{/facilities}">Facility</a>
-        <a th:href="@{/posts}">Posts</a>
-         <a th:href="@{/stationEstablishment}">Station Establishment</a>
-
+        </div>
+        <div class="container">
+            <a th:href="@{/posts}">Posts</a>
+        </div>
+        <div class="container">
+            
+        <a th:href="@{/staffEstablishments}"> Station Establishment</a>
+        </div>
+        
+        
         <div th:replace="fragments/footer :: footer"></div>
         <!-- /.container -->
 
         <!-- jQuery -->
-        <script src="js/jquery.js"></script>
+      
+          <script th:src="@{/bootstrap2/js/jquery.js}"></script>
 
         <!-- Bootstrap Core JavaScript -->
-        <script src="js/bootstrap.min.js"></script>
+      
+        <script th:src="@{/bootstrap2/js/bootstrap.min.js}"></script>
 
     </body>
 

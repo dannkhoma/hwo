@@ -1,21 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
 
-<html>
-    <head>
-        <title>TODO supply a title</title>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    </head>
+    
+
+        <meta charset="utf-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <meta name="description" content=""/>
+        <meta name="author" content=""/>
+
+        <title>Health Workforce Observatory</title>
+
+        <!-- Bootstrap Core CSS -->
+        <link th:href="@{/bootstrap2/css/bootstrap.min.css}" rel="stylesheet"/>
+
+        <!-- Custom CSS -->
+        <link  th:href="@{/bootstrap2/css/heroic-features.css}" rel="stylesheet"/>
     <body>
+         <div th:replace="fragments/header :: header"></div>
         
       <a th:href="@{|/facilities/facility/|}">New</a>
                
 
         <table>
             <thead>
-            <th>Name</th>
-            <th>Description</th>
-            <th>Action</th>
+              
+            <th> <span class="label label-primary">Name</span></th>
+            
+            <th> <span class="label label-primary">Description</span></th>
+             
+            <th> <span class="label label-primary">Action</span></th>
         </thead>
+       
         <tbody>
             <tr th:each="facility : ${facilities}">
                 <td th:text="${facility.name}"></td>
@@ -27,4 +43,11 @@
         </tbody>
     </table>
 </body>
+
+ <div th:replace="fragments/footer :: footer"></div>
+ <!-- /.container -->
+  <!-- jQuery -->
+        <script th:src="@{/bootstrap2/js/jquery.js}"></script>
+ <!-- Bootstrap Core JavaScript -->
+       <script th:src="@{/bootstrap2/js/bootstrap.min.js}"></script>
 </html>

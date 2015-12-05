@@ -10,6 +10,7 @@ import javax.persistence.Entity;
 public class Post extends StaticDataBaseEntity {
 
     private static final long serialVersionUID = 1L;
+   
     private String name;
     private String description;
 

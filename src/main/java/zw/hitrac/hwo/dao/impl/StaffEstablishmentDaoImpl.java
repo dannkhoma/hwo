@@ -38,4 +38,10 @@ public class StaffEstablishmentDaoImpl implements StaffEstablishmentDao {
         return staffEstablishmentRepository.findByUuid(uuid);
     }
 
+    @Override
+    public StaffEstablishment findByMohccUuid(String mohccUuid) {
+       return staffEstablishmentRepository.findByMohccUuid(mohccUuid); 
+    }
+
+   
 }

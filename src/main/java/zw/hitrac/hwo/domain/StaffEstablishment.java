@@ -1,32 +1,64 @@
 package zw.hitrac.hwo.domain;
 
 import javax.persistence.Entity;
+import javax.persistence.ManyToOne;
 
 /**
  *
- * @author hitrac
+ * @author Tonderai Ndangana
  */
 @Entity
 public class StaffEstablishment extends BaseEntity {
 
     private static final long serialVersionUID = 1L;
-    private String name;
-    private String description;
 
-    public String getName() {
-        return name;
+    private Integer totalNumberOfPost;
+    private Integer vacantPost;
+    private Integer filledPost;
+    private String  mohccUuid;
+
+    public String getMohccUuid() {
+        return mohccUuid;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setMohccUuid(String mohccUuid) {
+        this.mohccUuid = mohccUuid;
+    }
+    
+            
+    @ManyToOne
+    private Post post;
+
+    public Integer getTotalNumberOfPost() {
+        return totalNumberOfPost;
     }
 
-    public String getDescription() {
-        return description;
+    public void setTotalNumberOfPost(Integer totalNumberOfPost) {
+        this.totalNumberOfPost = totalNumberOfPost;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
+    public Integer getVacantPost() {
+        return vacantPost;
+    }
+
+    public void setVacantPost(Integer vacantPost) {
+        this.vacantPost = vacantPost;
+    }
+
+    public Integer getFilledPost() {
+        return filledPost;
+    }
+
+    public void setFilledPost(Integer filledPost) {
+        this.filledPost = filledPost;
+    }
+
+    public Post getPost() {
+        return post;
+    }
+
+    public void setPost(Post post) {
+        this.post = post;
     }
 
     @Override
