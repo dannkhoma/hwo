@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+    <head>
+        <meta charset="utf-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <meta name="description" content=""/>
+        <meta name="author" content=""/>
+
+        <title>Health Workforce Observatory</title>
+
+        <!-- Bootstrap Core CSS -->
+        <link th:href="@{/bootstrap2/css/bootstrap.min.css}" rel="stylesheet"/>
+
+        <!-- Custom CSS -->
+        <link  th:href="@{/bootstrap2/css/heroic-features.css}" rel="stylesheet"/>
+        <link th:href="@{/bootstrap2/css/hwo.css}" rel="stylesheet"/>
+    </head>
+    <body>
+        <div th:replace="fragments/header :: header"></div>
+
+        <div class="container">
+
+            <h3>Staff Establishment Details</h3>
+
+            <form action="#"   th:object="${staffEstablishment}" method="post">
+                <br/>
+                <div class="container">
+
+                    <div>
+                        <input type="hidden" th:field="*{id}" />
+                    </div>
+
+                    <div class="row">
+
+                        <div class="col-sm-5">
+                            <label>Facility</label>
+                            <select class="dropdown-header" th:field="*{facility}">
+                                <option th:each="facility : ${facilities}" 
+                                        th:value="${facility.id}" 
+                                        th:text="${facility.name}"></option>
+                            </select>
+                        </div>
+
+                        <div class="col-sm-5">
+
+                            <label>Post</label>
+                            <select class="dropdown-header" th:field="*{post}">
+                                <option th:each="post : ${posts}" 
+                                        th:value="${post.id}" 
+                                        th:text="${post.name}"></option>
+                            </select>
+                        </div>
+                    </div>
+                    <br/>
+
+                    <div class="row">
+                        <div class="col-sm-5">
+                            <label>Total Number Of  Post</label>
+                            <input type="text" th:field="*{totalNumberOfPost}"  class="form-control"/>
+                        </div>
+
+                        <div class="col-sm-5">
+                            <label>Number Of  Vacant Post</label>
+                            <input type="text" th:field="*{vacantPost}" class="form-control"/>
+                        </div>
+                    </div>
+                    <br/>
+                    <div class="row">
+                        <div class="col-sm-5">
+                            <label>Number Of  Filled Post</label>
+                            <input type="text" th:field="*{filledPost}" class="form-control"/>
+                        </div>
+                    </div>
+                    <br/>
+
+                    <div class="form-actions">
+                        <button class="btn btn-info" type="submit">Submit</button>
+                    </div>
+                </div>
+
+
+            </form>
+        </div>
+        <script th:src="@{/bootstrap2/js/jquery.js}"></script>
+
+        <!-- Bootstrap Core JavaScript -->
+
+        <script th:src="@{/bootstrap2/js/bootstrap.min.js}"></script>
+    </body>
+
+</html>

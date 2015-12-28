@@ -11,8 +11,10 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import zw.hitrac.hwo.domain.Facility;
 import zw.hitrac.hwo.domain.Post;
 import zw.hitrac.hwo.domain.StaffEstablishment;
+import zw.hitrac.hwo.service.FacilityService;
 import zw.hitrac.hwo.service.PostService;
 import zw.hitrac.hwo.service.StaffEstablishmentService;
 
@@ -27,17 +29,23 @@ public class StaffEstablishmentController {
     private StaffEstablishmentService staffEstablishmentService;
     @Autowired
     private PostService postService;
-    
-    
+    @Autowired
+    private FacilityService facilityService;
+
     @ModelAttribute("posts")
     public Collection<Post> getPosts() {
         return postService.findAll();
     }
 
+    @ModelAttribute("facilities")
+    public Collection<Facility> getFacilities() {
+        return facilityService.findAll();
+    }
+
     @RequestMapping(value = "/staffEstablishments", method = RequestMethod.GET)
     public String index(ModelMap model) {
         model.addAttribute("staffEstablishments", staffEstablishmentService.findAll());
-        return "staffEstablishmentListPage";
+        return "admin/staffEstablishmentListPage";
     }
 
     @RequestMapping(method = RequestMethod.GET, value = "/staffEstablishments/staffEstablishment")
@@ -50,7 +58,7 @@ public class StaffEstablishmentController {
         }
         model.addAttribute("staffEstablishment", staffEstablishment);
 
-        return "staffEstablishmentEditPage";
+        return "admin/staffEstablishmentEditPage";
     }
 
     @RequestMapping(method = RequestMethod.POST, value = "/staffEstablishments/staffEstablishment")

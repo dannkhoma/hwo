@@ -1,6 +1,7 @@
 package zw.hitrac.hwo.domain;
 
 import javax.persistence.Entity;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 
 /**
@@ -18,6 +19,8 @@ public class StaffEstablishment extends BaseEntity {
     private String mohccUuid;
     @OneToOne
     private Post post;
+    @ManyToOne
+    private Facility facility;
 
     public String getMohccUuid() {
         return mohccUuid;
@@ -57,6 +60,14 @@ public class StaffEstablishment extends BaseEntity {
 
     public void setPost(Post post) {
         this.post = post;
+    }
+
+    public Facility getFacility() {
+        return facility;
+    }
+
+    public void setFacility(Facility facility) {
+        this.facility = facility;
     }
 
     @Override

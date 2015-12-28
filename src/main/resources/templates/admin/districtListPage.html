@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+
+        <meta charset="utf-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <meta name="description" content=""/>
+        <meta name="author" content=""/>
+
+        <title>Health Workforce Observatory</title>
+
+        <!-- Bootstrap Core CSS -->
+        <link th:href="@{/bootstrap2/css/bootstrap.min.css}" rel="stylesheet"/>
+
+        <!-- Custom CSS -->
+        <link  th:href="@{/bootstrap2/css/heroic-features.css}" rel="stylesheet"/>
+        <link th:href="@{/bootstrap2/css/hwo.css}" rel="stylesheet"/>
+    </head>
+    <body>
+        <div th:replace="fragments/header :: header"></div>
+        <div class="container">
+            <div class="row">
+                <a th:href="@{|/districts/district/|}">New</a>
+            </div>
+            <div class="row">
+
+                <table class="table">
+                    <thead>
+                    <th>Name</th>
+                    <th>Description</th>
+                    <th>Province</th>
+                    <th>Action</th>
+                    </thead>
+                    <tbody>
+                        <tr th:each="district : ${districts}">
+                            <td th:text="${district.name}"></td>
+                            <td th:text="${district.description}"></td>
+                            <td th:text="${district.province.name}"></td>
+                            <td>
+                                <a th:href="@{|/districts/district/?id=${district.id}|}">Edit</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </body>
+
+    <script th:src="@{/bootstrap2/js/jquery.js}"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+
+    <script th:src="@{/bootstrap2/js/bootstrap.min.js}"></script>
+
+</html>

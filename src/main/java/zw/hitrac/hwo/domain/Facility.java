@@ -1,6 +1,7 @@
 package zw.hitrac.hwo.domain;
 
 import javax.persistence.Entity;
+import javax.persistence.ManyToOne;
 
 /**
  *
@@ -10,23 +11,15 @@ import javax.persistence.Entity;
 public class Facility extends StaticDataBaseEntity {
 
     private static final long serialVersionUID = 1L;
-    private String name;
-    private String description;
+    @ManyToOne
+    private District district;
 
-    public String getName() {
-        return name;
+    public District getDistrict() {
+        return district;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
+    public void setDistrict(District district) {
+        this.district = district;
     }
 
     @Override

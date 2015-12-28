@@ -10,25 +10,6 @@ import javax.persistence.Entity;
 public class Post extends StaticDataBaseEntity {
 
     private static final long serialVersionUID = 1L;
-   
-    private String name;
-    private String description;
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
 
     @Override
     public int hashCode() {
@@ -48,11 +29,6 @@ public class Post extends StaticDataBaseEntity {
             return false;
         }
         return true;
-    }
-
-    @Override
-    public String toString() {
-        return "zw.hitrac.hwo.domain.Post[ id=" + id + " ]";
     }
 
 }

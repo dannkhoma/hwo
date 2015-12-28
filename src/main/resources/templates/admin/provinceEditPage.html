@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <meta name="description" content=""/>
+        <meta name="author" content=""/>
+
+        <title>Health Workforce Observatory</title>
+
+        <!-- Bootstrap Core CSS -->
+        <link th:href="@{/bootstrap2/css/bootstrap.min.css}" rel="stylesheet"/>
+
+        <!-- Custom CSS -->
+        <link  th:href="@{/bootstrap2/css/heroic-features.css}" rel="stylesheet"/>
+        <link th:href="@{/bootstrap2/css/hwo.css}" rel="stylesheet"/>
+    </head>
+    <body>
+        <div th:replace="fragments/header :: header"></div>
+
+        <div class="container">
+            <h3>Province Details</h3>
+            <form action="#"   th:object="${province}" method="post">
+                <div>
+                    <input type="hidden" th:field="*{id}" />
+                </div>
+                <br/>
+                <div class="row">
+                    <div class="col-sm-5">
+                        <label>Name</label>
+                        <input type="text" th:field="*{name}"  class="form-control"/>
+                    </div>
+                </div>
+                <br/>
+                <div class="row">
+                    <div class="col-sm-5">
+                        <label>Description</label>
+                        <input type="text" th:field="*{description}" class="form-control"/>
+                    </div>
+                </div>
+                <br/>
+
+                <div class="form-actions">
+                    <button class="btn btn-info" type="submit">Submit</button>
+                </div>
+            </form>
+        </div>
+
+
+        <script th:src="@{/bootstrap2/js/jquery.js}"></script>
+
+        <!-- Bootstrap Core JavaScript -->
+
+        <script th:src="@{/bootstrap2/js/bootstrap.min.js}"></script>
+    </body>
+</html>

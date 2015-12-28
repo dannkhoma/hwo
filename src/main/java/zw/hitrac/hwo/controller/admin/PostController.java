@@ -25,7 +25,7 @@ public class PostController {
     @RequestMapping(value = "/posts", method = RequestMethod.GET)
     public String index(ModelMap model) {
         model.addAttribute("posts", postService.findAll());
-        return "postListPage";
+        return "admin/postListPage";
     }
 
     @RequestMapping(method = RequestMethod.GET, value = "/posts/post")
@@ -38,7 +38,7 @@ public class PostController {
         }
         model.addAttribute("post", post);
 
-        return "postEditPage";
+        return "admin/postEditPage";
     }
 
     @RequestMapping(method = RequestMethod.POST, value = "/posts/post")

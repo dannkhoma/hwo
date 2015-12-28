@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    
 
+    <head>
         <meta charset="utf-8"/>
         <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
         <meta name="viewport" content="width=device-width, initial-scale=1"/>
@@ -15,33 +15,35 @@
         <link th:href="@{/bootstrap2/css/bootstrap.min.css}" rel="stylesheet"/>
 
         <!-- Custom CSS -->
+        <link th:href="@{/bootstrap2/css/hwo.css}" rel="stylesheet"/>
         <link  th:href="@{/bootstrap2/css/heroic-features.css}" rel="stylesheet"/>
 
-    
+    </head>
 
-        <body>
+
+    <body>
         <div th:replace="fragments/header :: header"></div>
         <div class="container">
-        <a th:href="@{/facilities}">Facility</a>
-        </div>
-        <div class="container">
+            <a th:href="@{/facilities}">Facilities</a>
+            <br/>
             <a th:href="@{/posts}">Posts</a>
+            <br/>
+            <a th:href="@{/staffEstablishments}">Staff Establishments</a>
+            <br/>
+            <a th:href="@{/districts}">Districts</a>
+            <br/>
+            <a th:href="@{/provinces}">Provinces</a>
+
         </div>
-        <div class="container">
-            
-        <a th:href="@{/staffEstablishments}"> Station Establishment</a>
-        </div>
-        
-        
-        <div th:replace="fragments/footer :: footer"></div>
+
         <!-- /.container -->
 
         <!-- jQuery -->
-      
-          <script th:src="@{/bootstrap2/js/jquery.js}"></script>
+
+        <script th:src="@{/bootstrap2/js/jquery.js}"></script>
 
         <!-- Bootstrap Core JavaScript -->
-      
+
         <script th:src="@{/bootstrap2/js/bootstrap.min.js}"></script>
 
     </body>
